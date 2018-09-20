@@ -86,15 +86,30 @@ namespace LINQedLists
             //AGGREGATE OPERATIONS
             //Output how many numbers are in this list
 
-            List<int> numbers = new List<int>()
-            {
-                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
-            };
+            //List<int> numbers = new List<int>()
+            //{
+            //    15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            //};
 
-            var getCount = numbers.Count();
-                {
-                  Console.WriteLine($"{getCount} in the collection");
-                }
+            //var getCount = numbers.Count();
+            //    {
+            //      Console.WriteLine($"{getCount} in the collection");
+            //    }
+
+            //Console.Read();
+            //----------------END OF E5--------------
+
+            //How much money have we made?
+            List<double> purchases = new List<double>()
+            {
+                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+            };
+            var cashInflow = purchases.Sum();
+            {
+                Console.WriteLine($"{cashInflow}");
+            }
+
+
 
             Console.Read();
 
