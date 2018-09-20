@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LINQedLists
 {
@@ -6,7 +8,25 @@ namespace LINQedLists
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+
+
+            List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
+
+            var LFruits = from fruit in fruits
+                          where fruit.Contains("L") == true
+                          select fruit;
+            Console.WriteLine(string.Join(", ", LFruits));
+            //foreach (var ellls in LFruits)
+            //{
+
+            //}
+
+            Console.Read();
+                        
+
         }
     }
+
+    
 }
