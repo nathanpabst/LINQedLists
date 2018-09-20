@@ -41,25 +41,45 @@ namespace LINQedLists
             //ORDERING OPERATIONS
             //Order these student names alphabetically, in descending order(Z to A)
 
-            List<string> names = new List<string>()
+            //List<string> names = new List<string>()
+            //{
+            //    "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+            //    "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+            //    "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+            //    "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+            //    "Francisco", "Tre"
+            //};
+
+            //var sortList =
+            //    from name in names
+            //    orderby name descending
+            //    select name;
+
+            //foreach (string nombre in sortList)
+            //{
+            //    Console.WriteLine(nombre);
+            //}
+
+            //Console.Read();
+            //----------------END E3--------------
+
+            //Build a collection of these numbers sorted in ascending order
+
+            List<int> numbers = new List<int>()
             {
-                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
-                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
-                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
-                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
-                "Francisco", "Tre"
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
             };
 
-            var sortList =
-                from name in names
-                orderby name descending
-                select name;
+            var sortNums =
+                from num in numbers
+                orderby num ascending
+                select num;
 
-            foreach (string nombre in sortList)
+            foreach (int digits in sortNums)
             {
-                Console.WriteLine(nombre);
+                Console.WriteLine(digits);
             }
-            
+
             Console.Read();
         }
     }
