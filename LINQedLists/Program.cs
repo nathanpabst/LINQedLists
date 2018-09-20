@@ -65,22 +65,39 @@ namespace LINQedLists
 
             //Build a collection of these numbers sorted in ascending order
 
+            //List<int> numbers = new List<int>()
+            //{
+            //    15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            //};
+
+            //var sortNums =
+            //    from num in numbers
+            //    orderby num ascending
+            //    select num;
+
+            //foreach (int digits in sortNums)
+            //{
+            //    Console.WriteLine(digits);
+            //}
+
+            //Console.Read();
+            //------------END E4----------------
+
+            //AGGREGATE OPERATIONS
+            //Output how many numbers are in this list
+
             List<int> numbers = new List<int>()
             {
                 15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
             };
 
-            var sortNums =
-                from num in numbers
-                orderby num ascending
-                select num;
-
-            foreach (int digits in sortNums)
-            {
-                Console.WriteLine(digits);
-            }
+            var getCount = numbers.Count();
+                {
+                  Console.WriteLine($"{getCount} in the collection");
+                }
 
             Console.Read();
+
         }
     }
 
