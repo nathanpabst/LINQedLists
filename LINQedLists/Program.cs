@@ -12,27 +12,54 @@ namespace LINQedLists
             //Find the words in the collection that start with the letter 'L'
             //List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
 
+            //QUERY SYNTAX
             //var LFruits = from fruit in fruits
             //              where fruit.Contains("L") == true
             //              select fruit;
+
             //Console.WriteLine(string.Join(", ", LFruits));
+            //Console.Read();
+            //-------END E1-----------
+
+            //Which of the following numbers are multiples of 4 or 6
+            //List<int> numbers = new List<int>() { 15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96 };
+
+            //QUERY SYNTAX
+            //var fourSixMultiples =
+            //    from number in numbers
+            //    where (number % 2 == 0) == true
+            //    select number;
+
+            //foreach (int num in numbers)
+            //{
+            //    Console.WriteLine(string.Join(", ", fourSixMultiples));
+            //}
 
             //Console.Read();
+            //-------------END E2-------------
 
-            //__________________________
-            //Which of the following numbers are multiples of 4 or 6
+            //ORDERING OPERATIONS
+            //Order these student names alphabetically, in descending order(Z to A)
 
-            List<int> numbers = new List<int>() { 15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96 };
-
-            var fourSixMultiples =
-                from number in numbers
-                where (number % 2 == 0) == true
-                select number;
-            foreach (int num in numbers)
+            List<string> names = new List<string>()
             {
-                Console.WriteLine(string.Join(", ", fourSixMultiples));
-            }
+                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+                "Francisco", "Tre"
+            };
 
+            var sortList =
+                from name in names
+                orderby name descending
+                select name;
+
+            foreach (string nombre in sortList)
+            {
+                Console.WriteLine(nombre);
+            }
+            
             Console.Read();
         }
     }
