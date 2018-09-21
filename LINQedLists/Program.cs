@@ -166,13 +166,16 @@ namespace LINQedLists
             Console.WriteLine(string.Join(", ", richPeeps));
             Console.WriteLine();
 
+            //how many millionaires per bank?
+
             var millPerBank = customers.Where(c => c.Balance >= 1000000).GroupBy(
                 c => c.Bank,
                 c => c.Name
                 ).ToList();
 
+
             Console.WriteLine("Millionaires per bank:");
-            foreach (var mills in millPerBank)
+            foreach (var cust in millPerBank)
             {
             Console.WriteLine();
 
