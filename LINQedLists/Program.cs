@@ -161,35 +161,35 @@ namespace LINQedLists
 
             var richPeeps = from cust in customers
                             where cust.Balance >= 1000000
-                            select cust.Name;
+                            select cust;
+
             Console.WriteLine("Millionaires club:");
-            Console.WriteLine(string.Join(", ", richPeeps));
+            foreach (var peep in richPeeps)
+                Console.WriteLine(peep.Name);
             Console.WriteLine();
 
             //how many millionaires per bank?
 
-            //var millPerBank = richPeeps.GroupBy(cust => cust.Bank);
+            var millPerBank = richPeeps.GroupBy(c => c.Bank);
 
-
-            //Console.WriteLine("Millionaires per bank:");
-            //foreach (var cust in millPerBank)
-            //{
-            //Console.WriteLine();
-
-            //}
-                
-            //Console.Read();
-
-
+            Console.WriteLine("Millionaires per bank:");
+            foreach (var cust in millPerBank)
+            {
+                Console.WriteLine($"{cust.Key} : {cust.ToList().Count}");
+            }
+                Console.Read();
         }
+
         public class Customer
         {
             public string Name { get; set; }
             public double Balance { get; set; }
             public string Bank { get; set; }
+
+        }
+
+
         }
     }
 
-
-    }
 
