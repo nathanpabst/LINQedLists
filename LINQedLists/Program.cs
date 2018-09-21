@@ -168,20 +168,17 @@ namespace LINQedLists
 
             //how many millionaires per bank?
 
-            var millPerBank = customers.Where(c => c.Balance >= 1000000).GroupBy(
-                c => c.Bank,
-                c => c.Name
-                ).ToList();
+            //var millPerBank = richPeeps.GroupBy(cust => cust.Bank);
 
 
-            Console.WriteLine("Millionaires per bank:");
-            foreach (var cust in millPerBank)
-            {
-            Console.WriteLine();
+            //Console.WriteLine("Millionaires per bank:");
+            //foreach (var cust in millPerBank)
+            //{
+            //Console.WriteLine();
 
-            }
+            //}
                 
-            Console.Read();
+            //Console.Read();
 
 
         }
