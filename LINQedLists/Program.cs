@@ -177,9 +177,10 @@ namespace LINQedLists
             {
                 Console.WriteLine($"{cust.Key} : {cust.ToList().Count}");
             }
-                Console.Read();
+            Console.Read();
         }
 
+        //Define a customer
         public class Customer
         {
             public string Name { get; set; }
@@ -187,9 +188,11 @@ namespace LINQedLists
             public string Bank { get; set; }
 
         }
+        //--------------END E9------------------
 
+           
 
-        }
+    }
     }
 
 
